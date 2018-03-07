@@ -1,4 +1,4 @@
-* Statistics and Probability Theory
+#+OPTIONS: toc:2 
 
 * Machine Learning
 ** Bayes rule
