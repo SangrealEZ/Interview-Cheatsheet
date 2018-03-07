@@ -1,67 +1,24 @@
 
 # Table of Contents
 
-1.  [Machine Learning](#org0f13010)
-    1.  [Bayes rule](#org1e92908)
-    2.  [kNN](#org4141c33)
-    3.  [Decision Tree](#orga1decc9)
-    4.  [Random Forests](#orgce67bd8)
-    5.  [Boosting](#org42fad6f)
-    6.  [Clustering](#orgbe0b1da)
-2.  [Statistics & Probability Theory](#org664a509)
-    1.  [Uncorrelated but not independent](#org18d11b0)
-    2.  [Convergence](#org0d00298)
-    3.  [Bootstrap](#org4d03393)
-    4.  [Basic statistics](#org8944f82)
-    5.  [Hypothesis testing](#org01d5f27)
-3.  [Linear Models](#orgc358a2c)
-    1.  [Linear regression](#org61a4a9c)
-    2.  [Regularization](#org3329b0e)
-    3.  [Fixed effects vs. Random effects](#orga3f830a)
-4.  [Frequent Interview Questions](#org907118c)
-    1.  [Q1: Trade-off between bias and variance](#orgae97a2a)
-    2.  [Q2: Difference between supervised and unsupervised learning](#org74c5ab3)
-    3.  [Q3: Difference between kNN and k-means](#org4f9bb29)
-    4.  [Q4: How ROC(receiver operating characteristics) curve works](#org625491c)
-    5.  [Q5: Define precision and recall](#org9880116)
-    6.  [Q6: Bayes theorem](#org69f0e8d)
-    7.  [Q7: Why is "Naive" Bayes naive?](#org5bcc9e0)
-    8.  [Q8: The difference between L1 and L2 regularization](#org7857287)
-    9.  [Q9: Favorite algorithm and reason](#orge0512f9)
-    10. [Q10: Type I and Type II errors](#org279dd7e)
-    11. [Q11: What is Fourier Transform?](#org2d976f7)
-    12. [Q12: Difference between probability and likelihood](#orgf960918)
-    13. [Q13: Deep Learning](#org08d6b13)
-    14. [Q14: Difference between generative and discriminative model](#org6173b87)
-    15. [Q15: Cross-validation techniques for time series](#org950023c)
-    16. [Q16: How is decision tree pruned](#org824cb0d)
-    17. [Q17: Deferent model performance statistics](#org032a63f)
-    18. [Q18: F1 score and how to use it](#org0203510)
-    19. [Q19: How to handle imbalanced datasets?](#orgff9fafb)
-    20. [Q20: When should you use classification over regression?](#org18064f7)
-    21. [Q21: Name an example where ensemble techniques might be useful.](#orgc78cd18)
-    22. [Q22: How do you ensure you’re not overfitting with a model?](#org91f8605)
-    23. [Q23: What evaluation approaches would you work to gauge the effectiveness of a machine learning model?](#orgd3a200c)
-    24. [Q24: How would you evaluate a logistic regression model?](#org61378f9)
-    25. [Q25: What’s the “kernel trick” and how is it useful?](#org8ead39f)
-5.  [Hadoop & Spark](#org83ef338)
+1.  [Machine Learning](#orgb8cf686)
+2.  [Statistics & Probability Theory](#orga2dc2cf)
+3.  [Linear Models](#org920d5b2)
+4.  [Frequent Interview Questions](#orgcdece7c)
+5.  [Hadoop & Spark](#orgc3eccce)
 
 
 
-<a id="org0f13010"></a>
+<a id="orgb8cf686"></a>
 
 # Machine Learning
 
-
-<a id="org1e92908"></a>
 
 ## Bayes rule
 
 -   Assign x to the class with the largest posterior class probability given x.
 -   Bayes rule minimizes the risk function.
 
-
-<a id="org4141c33"></a>
 
 ## kNN
 
@@ -71,8 +28,6 @@
 
 ### Cons:
 
-
-<a id="orga1decc9"></a>
 
 ## Decision Tree
 
@@ -88,8 +43,6 @@
 -   greedy, not global optimization
 -   instability: an error at the top will affect everything below (ensemble can solve this)
 
-
-<a id="orgce67bd8"></a>
 
 ## Random Forests
 
@@ -111,8 +64,6 @@
 -   stable results
 
 
-<a id="org42fad6f"></a>
-
 ## Boosting
 
 
@@ -125,8 +76,6 @@
 
 -   can overfit, need to limit number of iterations and each model's complexity
 
-
-<a id="orgbe0b1da"></a>
 
 ## Clustering
 
@@ -211,26 +160,20 @@
     4.  repeat 2) and 3) until convergence
 
 
-<a id="org664a509"></a>
+<a id="orga2dc2cf"></a>
 
 # Statistics & Probability Theory
 
-
-<a id="org18d11b0"></a>
 
 ## Uncorrelated but not independent
 
 -   example: \(X \sim U(-1,1),\ Y = X^2\), or \(Y = |X|\)
 
 
-<a id="org0d00298"></a>
-
 ## Convergence
 
 -   WLLN: \(X_1, ... X_n iid\), then the sample mean converges in probability to theoretical mean \(\mu\)
 
-
-<a id="org4d03393"></a>
 
 ## Bootstrap
 
@@ -240,8 +183,6 @@
 -   bootstrap sometimes will fail when the sample population is heavy tailed and don't follow CLT
 
 
-<a id="org8944f82"></a>
-
 ## Basic statistics
 
 -   skewness: \(E(X - \mu)^3 / \sigma^3\)
@@ -250,8 +191,6 @@
 -   kurtosis: \(E(X - \mu)^4 / \sigma^4 - 3\)
     -   indicates heavier(positive) or lighter(negative) tails compared to a normal distribution with the same mean and variance
 
-
-<a id="org01d5f27"></a>
 
 ## Hypothesis testing
 
@@ -263,12 +202,10 @@
 2.  Power function: The probability of rejecting H0 given the parameter, as a function of the parameter.
 
 
-<a id="orgc358a2c"></a>
+<a id="org920d5b2"></a>
 
 # Linear Models
 
-
-<a id="org61a4a9c"></a>
 
 ## Linear regression
 
@@ -286,8 +223,6 @@
 -   Recall that \(COV(\hat{\beta}) = \sigma^2(X^TX)^{-1}\). Collinearity will cause this to be large.
 -   Variance Inflation Factors: \(1 / (1 - R_j^2)\), \(R_j^2\) is the R square of regress \(X_j\) on other predictors. \(Var(\hat \beta^j) = VIF * Var(\hat \beta^j(0)\), where \(\beta_j(0)\) is the estimate of the one predictor model
 
-
-<a id="org3329b0e"></a>
 
 ## Regularization
 
@@ -311,22 +246,18 @@
 -   L1 regularization. Adds a penalty proportional to the sum of absolute values of coefficients.
 
 
-<a id="orga3f830a"></a>
-
 ## Fixed effects vs. Random effects
 
 
 ### Fixed effects
 
 
-<a id="org907118c"></a>
+<a id="orgcdece7c"></a>
 
 # Frequent Interview Questions
 
 [Link](https://www.springboard.com/blog/machine-learning-interview-questions/)
 
-
-<a id="orgae97a2a"></a>
 
 ## Q1: Trade-off between bias and variance
 
@@ -335,12 +266,8 @@
 -   strike a balance between these two by controlling the model complexity
 
 
-<a id="org74c5ab3"></a>
-
 ## Q2: Difference between supervised and unsupervised learning
 
-
-<a id="org4f9bb29"></a>
 
 ## Q3: Difference between kNN and k-means
 
@@ -348,15 +275,11 @@
 -   "k" has different meanings. In kNN, it stands for number of neighbors. In k-means, it's number of clusters.
 
 
-<a id="org625491c"></a>
-
 ## Q4: How ROC(receiver operating characteristics) curve works
 
 -   Plot true positive rate (sensitivity) against false positive rate (fall-out)
 -   Represents the trade-off between TPR and FPR. Higher TPR usually means it tends to make FP occurs more easily.
 
-
-<a id="org9880116"></a>
 
 ## Q5: Define precision and recall
 
@@ -367,14 +290,10 @@
 -   false negative rate (FNR): FN / P
 
 
-<a id="org69f0e8d"></a>
-
 ## Q6: Bayes theorem
 
 -   Bayes’ Theorem is the basis behind a branch of machine learning that most notably includes the Naive Bayes classifier.
 
-
-<a id="org5bcc9e0"></a>
 
 ## Q7: Why is "Naive" Bayes naive?
 
@@ -382,17 +301,11 @@
 -   Has far fewer parameters than LDA and QDA. Works well even when p is very large (better than LDA)
 
 
-<a id="org7857287"></a>
-
 ## Q8: The difference between L1 and L2 regularization
 
 
-<a id="orge0512f9"></a>
-
 ## Q9: Favorite algorithm and reason
 
-
-<a id="org279dd7e"></a>
 
 ## Q10: Type I and Type II errors
 
@@ -400,24 +313,16 @@
 -   Type II: False negative. Claiming nothing happened when it has.
 
 
-<a id="org2d976f7"></a>
-
 ## Q11: What is Fourier Transform?
 
-
-<a id="orgf960918"></a>
 
 ## Q12: Difference between probability and likelihood
 
 -   Different view point. Likelihood treates parameters as variables and data points as constants.
 
 
-<a id="org08d6b13"></a>
-
 ## Q13: Deep Learning
 
-
-<a id="org6173b87"></a>
 
 ## Q14: Difference between generative and discriminative model
 
@@ -425,12 +330,8 @@
 -   Discriminative models model only the conditional probability of outputs based on inputs. Generally out-performs Generative models in classification tasks.
 
 
-<a id="org950023c"></a>
-
 ## Q15: Cross-validation techniques for time series
 
-
-<a id="org824cb0d"></a>
 
 ## Q16: How is decision tree pruned
 
@@ -438,19 +339,13 @@
 -   Cost complexity pruning: Generate a series of trees by replacing node into a single leaf, each time selects the subtree that results in the smallest (increase in error rate / decrease in # of leaves). The select the tree in this series with the best train/CV accuracy.
 
 
-<a id="org032a63f"></a>
-
 ## Q17: Deferent model performance statistics
 
-
-<a id="org0203510"></a>
 
 ## Q18: F1 score and how to use it
 
 -   F1 score is the harmonic mean of precision and recall. It is valuable when true negative rate is not important.
 
-
-<a id="orgff9fafb"></a>
 
 ## Q19: How to handle imbalanced datasets?
 
@@ -463,37 +358,25 @@
 -   others: [link](https://machinelearningmastery.com/tactics-to-combat-imbalanced-classes-in-your-machine-learning-dataset/)
 
 
-<a id="org18064f7"></a>
-
 ## Q20: When should you use classification over regression?
 
-
-<a id="orgc78cd18"></a>
 
 ## Q21: Name an example where ensemble techniques might be useful.
 
 
-<a id="org91f8605"></a>
-
 ## Q22: How do you ensure you’re not overfitting with a model?
 
-
-<a id="orgd3a200c"></a>
 
 ## Q23: What evaluation approaches would you work to gauge the effectiveness of a machine learning model?
 
 
-<a id="org61378f9"></a>
-
 ## Q24: How would you evaluate a logistic regression model?
 
-
-<a id="org8ead39f"></a>
 
 ## Q25: What’s the “kernel trick” and how is it useful?
 
 
-<a id="org83ef338"></a>
+<a id="orgc3eccce"></a>
 
 # Hadoop & Spark
 

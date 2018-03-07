@@ -1,4 +1,4 @@
-#+OPTIONS: toc:2 
+#+OPTIONS: toc:1 
 
 * Machine Learning
 ** Bayes rule
