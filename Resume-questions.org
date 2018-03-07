@@ -1,0 +1,30 @@
+* Introduction
+My name is Xinghui. I’m a second year masters student in applied statistics at University of Michigan. I studied statistics for both my Bachelor’s degree and Master’s degree. Throughout my education, I familiarized myself with modern statistical methods and machine learning techniques. On the programming side, I have over three years of programming experience with R, SAS and Python and have done various data analysis projects with each of them. I thoroughly enjoy uncovering insights from data through statistical programming. 
+
+My most recent work experience is this summer, I worked as a quantitative intern at U of M health system. My duties mostly involve writing R programs to generate SQL files to extract medical records from our database. And then process those data to identify low value imaging procedures and produce data analysis reports. So that the healthcare specialists can use those results to help reduce medical cost in our system.
+
+I think one of my biggest strengths as a data analyst is that I am an avid learner. Especially in the world of data science, there are so many cool things to learn. In the last couple of months I spent a lot of time learning how to develop web application. I just finished creating my first large web application recently and I really enjoy the entire learning and development process. 
+
+* Experiences
+** Michigan Medicine internship
+*** Objective: Identify and evaluate low-value medical imaging procedures to reduce cost. 
+**** Note: Right now we are focusing on making sure our programs can accurately identify low-value imagings and calculate imagings rates, as well as a reporting system with analyses and visualizations. We will bring in cost variables this year. 
+*** Job functions: 
+** Towers Watson internship
+*** Objective: Help clients to optimize company structure and salary and benefits structure. 
+**** Pros of Consulting firm: simple company structure. Least amount of corporate beauraucracy. People are driven, working towards the same goal.
+** Bankruptcy Prediction
+*** Benefits for company: Can project a probability for bankrutcy, used as an indicator of the company financial standing. Urge company to take actions.
+**** Note: Already shows decent accuracy even without using any financial background or any outside variables. Can be very accurate if bringing in domain knowledge.
+** MovieStats web app
+*** Motivation: This is a project I started out of my own interest. Shiny is like a more flexible, more powerful but less developed version of tableau. I do this because I want to create something that's visually appealing and also conveys lots of information.
+    
+* Behavioral Questions
+** What makes you a good addition to the company?
+*** I'm a quick learner. I can learn new theoretical concepts and technical tools very fast. In the world of data science, the tools we use evolve very fast so I think being a quick learner allows me to keep up with the most cutting edge softwares and techniques. And also I'm always excited to learn new things. Constanly finding new things to learn.
+
+* Questions for interviewer
+** Cascade Data Labs
+*** Hiring process
+*** How many consultants are you planning to hire this year?
+*** What can you tell me about some of cascade's ongoing projects?

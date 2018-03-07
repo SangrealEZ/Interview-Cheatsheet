@@ -1,0 +1,44 @@
+* SQL tips and tricks
+** You can join on all kinds of conditions. It doesn't have to be the form of =ID1 = ID2=.
+#+BEGIN_SRC sql
+/* Find the date ids where the temperature is higher than yesterday */
+SELECT w1.Id
+FROM Weather AS w1 INNER JOIN Weather AS w2
+ON DATEDIFF(w1.Date, w2.Date) = 1
+AND w1.Temperature > w2.Temperature
+#+END_SRC
+** =LIMIT x, y= can extract =y= rows after skipping the first =x= rows. You can also use =LIMIT y OFFSET x=.
+** =IFNULL(value, value when is NULL)= to handle missing values.
+** =COALESCE= returns the first non-NULL value of the input on a row by row basis.
+#+BEGIN_SRC sql
+SELECT s1.id, COALESCE(s2.student, s1.student) AS student
+FROM seat s1 LEFT JOIN seat s2 
+ON ((s1.id + 1) ^ 1) - 1 = s2.id
+ORDER BY s1.id
+#+END_SRC
+** =CASE= statement can be used to assign values row by row with conditions.
+#+BEGIN_SRC sql
+SELECT
+    (CASE
+        WHEN MOD(id, 2) != 0 AND counts != id THEN id + 1
+        WHEN MOD(id, 2) != 0 AND counts = id THEN id
+        ELSE id - 1
+    END) AS id,
+    student
+FROM
+    seat,
+    (SELECT
+        COUNT(*) AS counts
+    FROM
+        seat) AS seat_counts
+ORDER BY id ASC
+#+END_SRC
+** A work-around to add a row number column in mysql:
+#+BEGIN_SRC sql
+SELECT t.*, 
+       @rownum := @rownum + 1 AS rank
+  FROM YOUR_TABLE t, 
+       (SELECT @rownum := 0) r
+#+END_SRC
+
+* HiveQL
