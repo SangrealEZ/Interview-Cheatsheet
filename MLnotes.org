@@ -1,4 +1,6 @@
 #+OPTIONS: toc:1 
+#+OPTIONS: tex:t 
+#+STARTUP: latexpreview
 
 * Machine Learning
 ** Bayes rule

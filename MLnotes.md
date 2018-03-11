@@ -1,16 +1,16 @@
 
 # Table of Contents
 
-1.  [Machine Learning](#org9faeda6)
-2.  [Statistics & Probability Theory](#org593217d)
-3.  [Linear Models](#org1dfec58)
-4.  [Frequent Interview Questions](#org350e9ac)
-5.  [Hadoop & Spark](#orgd6f66fb)
-6.  [A/B Testing & Hypothesis Testing](#orgb96a9f1)
+1.  [Machine Learning](#org28f55a0)
+2.  [Statistics & Probability Theory](#org8e7dc0a)
+3.  [Linear Models](#orgb19b2d1)
+4.  [Frequent Interview Questions](#org3c87a81)
+5.  [Hadoop & Spark](#org59ed870)
+6.  [A/B Testing & Hypothesis Testing](#orgda98359)
 
 
 
-<a id="org9faeda6"></a>
+<a id="org28f55a0"></a>
 
 # Machine Learning
 
@@ -161,7 +161,7 @@
     4.  repeat 2) and 3) until convergence
 
 
-<a id="org593217d"></a>
+<a id="org8e7dc0a"></a>
 
 # Statistics & Probability Theory
 
@@ -203,7 +203,7 @@
 2.  Power function: The probability of rejecting H0 given the parameter, as a function of the parameter.
 
 
-<a id="org1dfec58"></a>
+<a id="orgb19b2d1"></a>
 
 # Linear Models
 
@@ -253,7 +253,7 @@
 ### Fixed effects
 
 
-<a id="org350e9ac"></a>
+<a id="org3c87a81"></a>
 
 # Frequent Interview Questions
 
@@ -377,12 +377,12 @@
 ## Q25: What’s the "kernel trick" and how is it useful?
 
 
-<a id="orgd6f66fb"></a>
+<a id="org59ed870"></a>
 
 # Hadoop & Spark
 
 
-<a id="orgb96a9f1"></a>
+<a id="orgda98359"></a>
 
 # A/B Testing & Hypothesis Testing
 
