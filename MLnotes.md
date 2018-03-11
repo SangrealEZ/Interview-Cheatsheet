@@ -1,15 +1,16 @@
 
 # Table of Contents
 
-1.  [Machine Learning](#orgb8cf686)
-2.  [Statistics & Probability Theory](#orga2dc2cf)
-3.  [Linear Models](#org920d5b2)
-4.  [Frequent Interview Questions](#orgcdece7c)
-5.  [Hadoop & Spark](#orgc3eccce)
+1.  [Machine Learning](#org9faeda6)
+2.  [Statistics & Probability Theory](#org593217d)
+3.  [Linear Models](#org1dfec58)
+4.  [Frequent Interview Questions](#org350e9ac)
+5.  [Hadoop & Spark](#orgd6f66fb)
+6.  [A/B Testing & Hypothesis Testing](#orgb96a9f1)
 
 
 
-<a id="orgb8cf686"></a>
+<a id="org9faeda6"></a>
 
 # Machine Learning
 
@@ -160,7 +161,7 @@
     4.  repeat 2) and 3) until convergence
 
 
-<a id="orga2dc2cf"></a>
+<a id="org593217d"></a>
 
 # Statistics & Probability Theory
 
@@ -202,7 +203,7 @@
 2.  Power function: The probability of rejecting H0 given the parameter, as a function of the parameter.
 
 
-<a id="org920d5b2"></a>
+<a id="org1dfec58"></a>
 
 # Linear Models
 
@@ -252,7 +253,7 @@
 ### Fixed effects
 
 
-<a id="orgcdece7c"></a>
+<a id="org350e9ac"></a>
 
 # Frequent Interview Questions
 
@@ -318,7 +319,7 @@
 
 ## Q12: Difference between probability and likelihood
 
--   Different view point. Likelihood treates parameters as variables and data points as constants.
+-   Different view point. Likelihood treats parameters as variables and data points as constants.
 
 
 ## Q13: Deep Learning
@@ -373,10 +374,85 @@
 ## Q24: How would you evaluate a logistic regression model?
 
 
-## Q25: What’s the “kernel trick” and how is it useful?
+## Q25: What’s the "kernel trick" and how is it useful?
 
 
-<a id="orgc3eccce"></a>
+<a id="orgd6f66fb"></a>
 
 # Hadoop & Spark
+
+
+<a id="orgb96a9f1"></a>
+
+# A/B Testing & Hypothesis Testing
+
+[Reference article](https://conversionxl.com/blog/ab-testing-statistics/)
+
+
+## What is conversion rate?
+
+-   For a website, conversion rate is the percentage of visitors that do a thing that converts to profit. Example: amazon.com, purchase rate.
+-   Exit rate: percentage of visitors leave the site.
+-   Drop-off rate: percentage of visitors stay but don't convert.
+
+
+## What are A/A testing and A/B testing?
+
+-   **A/A testing**: compare the conversion rates of two identical websites. If significant difference is observed, need to investigate cause.
+-   **A/B testing**: compared the control version and a modified version of a website. See if there is significant increase in conversion rate.
+
+
+## How to interpret p-values
+
+-   P-value does not tell us the probability that B is better than A.
+-   Similarly, it doesn’t tell us the probability that we will make a mistake in selective B over A.
+-   P-value is the probability of seeing a result or more extreme given that the null hypothesis is true. Or, "How surprising is that result when null is true?"
+
+
+## Significance and Power
+
+
+### Statistical Significance
+
+-   It is the probability of seeing an effect when none exists, aka. falsely rejecting null, aka. false positive rate, aka. Type I error.
+-   To say a result has statistical significance is to say it's very unlikely to occur given the null hypothesis.
+-   Significance level (alpha) is a defined level of how big the Type I error can be acceptable.
+-   P-value is the probability of obtaining a result at least as extreme given null is true. If it's smaller than alpha, then we have statistical significance.
+-   5% is the standard significance level. Can be lower depending on the subject.
+
+
+### Statistical Power
+
+-   It is the probability of seeing an effect when there is actually an effect, aka. true positive rate, aka. 1 - Type II error.
+-   **Type II error**: Claiming there's no effect when there is. So a test with high power has low Type II error.
+-   80% is the standard level for statistical power.
+
+
+### Four levels to be set in A/B testing
+
+-   **Effect size**: Percentage increase in conversion rate.
+-   **Sample size (N)**
+-   **Significance level (alpha)**
+-   **Statistical power**
+
+
+## Confidence Interval
+
+-   The range corresponds to the margin of error you are willing to accept.
+
+
+## Multiple Comparisons Problem
+
+This refers to the problem of using the same significance level for testing multiple hypotheses at once as testing a single hypothesis. See [this wiki-page](https://en.wikipedia.org/wiki/Multiple_comparisons_problem).
+
+
+### Key Concepts
+
+-   **Family-wise error rate(FWER)**: The probability of having at least one false positive out of all tests. This is smaller than the sum of all FPRs(significance levels).
+
+
+### Countermeasure
+
+-   **Bonferroni Correction**: Say we are testing \(m\) hypotheses. Set the significance level to \(\alpha/m\) instead of \(\alpha\). This is very conservative in that it makes sure the FWER is smaller than the upper bound (sum of \(m\) levels). So it's hard for a test to be significant using this method.
+-   **Holm-Bonferroni Method**: Sort the p-values by ascending order. Find the first \(p_{(k)}\) such that \(p_{(k)} > \alpha / (m - k + 1)\). Then reject only the first \(k - 1\) tests. This is less conservative than Bonferroni correction and still contains the FWER under significance level.
 
