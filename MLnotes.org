@@ -219,3 +219,9 @@
 *** Countermeasure
     - *Bonferroni Correction*: Say we are testing $m$ hypotheses. Set the significance level to $\alpha/m$ instead of $\alpha$. This is very conservative in that it makes sure the FWER is smaller than the upper bound (sum of $m$ levels). So it's hard for a test to be significant using this method.
     - *Holm-Bonferroni Method*: Sort the p-values by ascending order. Find the first $p_{(k)}$ such that $p_{(k)} > \alpha / (m - k + 1)$. Then reject only the first $k - 1$ tests. This is less conservative than Bonferroni correction and still contains the FWER under significance level.
+
+* Experimental Design
+** Three Principles
+   - *Replication*: Repitition of an experiment. Replicates are runs of an experiment or sets of experimental units that have the same values of the control variables. More runs means more stable results and more evidence.
+   - *Randomization*: Subjects are randomly assigned to treatment groups. Makes confounding the effect of treatment with an unobserved variable unlikely.
+   - *Blocking*: Randomization within blocks of homogeneous experimental units. The goal is to evenly distribute treatments across large potential sources of variation. (Like adding a nuianced factor level to account for the variability from an uninterested source)

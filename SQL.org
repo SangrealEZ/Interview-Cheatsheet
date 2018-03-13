@@ -40,5 +40,14 @@ SELECT t.*,
   FROM YOUR_TABLE t, 
        (SELECT @rownum := 0) r
 #+END_SRC
+** Creating temporary table with =CREATE TEMPORARY TABLE IF NOT EXISTS tb_name AS (query)=
+** SQL doesn't have anti join but this can be done with left join, just pick the ones with NULL second id. Example: select employees that aren't managers:
+#+BEGIN_SRC sql
+SELECT e1.name
+FROM employees AS e1
+LEFT JOIN employees AS e2
+ON e1.Id = e2.managerId
+WHERE e2.managerId IS NULL
+#+END_SRC
 
 * HiveQL
